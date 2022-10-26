@@ -1,0 +1,30 @@
+{
+  "name": "hopper",
+  "version": "1.0.0",
+  "description": "Hopper is a link shortener",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/main/main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreglatz/hopper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreglatz/hopper/issues"
+  },
+  "homepage": "https://github.com/andreglatz/hopper#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "joi": "^17.6.4",
+    "mongodb": "^4.11.0"
+  },
+  "devDependencies": {
+    "jest": "^29.2.2",
+    "nodemon": "^2.0.20"
+  }
+}
