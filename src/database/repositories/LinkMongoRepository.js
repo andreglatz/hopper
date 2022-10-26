@@ -1,5 +1,5 @@
 const { MongoClient } = require("mongodb");
-
+const { Link } = require("../../entities");
 class LinkMongoRepository {
   constructor() {
     const uri = "mongodb://root:root@localhost:27017/?authMechanism=DEFAULT";
@@ -14,10 +14,14 @@ class LinkMongoRepository {
     await this.db.insertOne(link.toJSON());
   }
 
+  async update(link) {
+    await this.db.updateOne({ path: link.path }, { $set: link.toJSON() });
+  }
+
   async findByPath(path) {
     const link = await this.db.findOne({ path });
 
-    return link;
+    return new Link({ ...link });
   }
 }
 

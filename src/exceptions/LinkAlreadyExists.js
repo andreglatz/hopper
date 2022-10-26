@@ -1,7 +1,7 @@
 class LinkAlreadyExists extends Error {
   constructor(message) {
     super(message);
-    this.name = "AlreadyLinkExists";
+    this.name = "LinkAlreadyExists";
     this.message = message;
   }
 }
